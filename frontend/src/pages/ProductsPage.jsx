@@ -13,14 +13,17 @@ const ProductsPage = () => {
   const [loading, setLoading] = useState(true);
   const [searchParams, setSearchParams] = useSearchParams();
   const activeCategory = searchParams.get("kategori") || "all";
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   useEffect(() => {
     const fetchProducts = async () => {
       setLoading(true);
       try {
-        const categoryParam = activeCategory !== "all" ? `?category=${activeCategory}` : "";
-        const response = await axios.get(`${API}/products${categoryParam}`);
+        let url = `${API}/products?lang=${language}`;
+        if (activeCategory !== "all") {
+          url += `&category=${activeCategory}`;
+        }
+        const response = await axios.get(url);
         setProducts(response.data);
       } catch (error) {
         console.error("Error fetching products:", error);
@@ -29,7 +32,7 @@ const ProductsPage = () => {
       }
     };
     fetchProducts();
-  }, [activeCategory]);
+  }, [activeCategory, language]);
 
   const handleCategoryChange = (category) => {
     if (category === "all") {
