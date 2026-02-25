@@ -251,8 +251,9 @@ async def seed_products():
                 "Yan Bordür": "Bej Keten Kumaş",
                 "Ölçüler": "90x190 cm / 150x200 cm"
             },
-            "image_url": "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/7h3jxag6_13.png",
+            "image_url": "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/333vteli_15.png",
             "gallery": [
+                "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/333vteli_15.png",
                 "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/7h3jxag6_13.png",
                 "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/coegq9e1_12.png"
             ],
@@ -316,8 +317,9 @@ async def seed_products():
                 "Roll-Pack": "Uygun",
                 "Ölçüler": "90x150 cm / 150x200 cm"
             },
-            "image_url": "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/aiw38sv7_14.png",
+            "image_url": "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/m30kjnyn_16.png",
             "gallery": [
+                "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/m30kjnyn_16.png",
                 "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/aiw38sv7_14.png",
                 "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/mn9uyaok_15.png"
             ],
