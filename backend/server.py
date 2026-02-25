@@ -313,39 +313,11 @@ async def seed_products():
             },
             "image_url": "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/aiw38sv7_14.png",
             "gallery": [
-                "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/aiw38sv7_14.png"
-            ],
-            "is_featured": False,
-            "order": 6,
-            "created_at": datetime.now(timezone.utc).isoformat()
-        },
-        # 7. İBED ECONOMY (En ekonomik model)
-        {
-            "id": str(uuid.uuid4()),
-            "name": "İBED Economy",
-            "category": "yatak",
-            "description": "Ekonomik fiyat, kaliteli uyku. Temel konfor ihtiyaçlarını karşılayan giriş seviye yatak modeli. Dayanıklı yapısı ile uzun ömürlü kullanım.",
-            "features": [
-                "Örme Kumaş Kaplama",
-                "Elyaf + Sünger Kapitone",
-                "Soft Sünger Katmanı",
-                "Sert Keçe Destek",
-                "Bonnel Yay Çekirdeği",
-                "Ekonomik Fiyat Avantajı"
-            ],
-            "specifications": {
-                "Yükseklik": "20-22 cm (Tahmini)",
-                "Yay Sistemi": "Bonnel Yay",
-                "Kullanım": "Tek Yönlü",
-                "Kumaş": "Örme Kumaş",
-                "Ölçüler": "90x190 cm / 150x200 cm"
-            },
-            "image_url": "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/mn9uyaok_15.png",
-            "gallery": [
+                "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/aiw38sv7_14.png",
                 "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/mn9uyaok_15.png"
             ],
             "is_featured": False,
-            "order": 7,
+            "order": 6,
             "created_at": datetime.now(timezone.utc).isoformat()
         }
     ]
