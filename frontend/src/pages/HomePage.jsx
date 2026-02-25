@@ -38,9 +38,9 @@ const HomePage = () => {
   };
 
   return (
-    <div data-testid="home-page" className="min-h-screen">
+    <div data-testid="home-page" className="min-h-screen pt-16 sm:pt-20">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[calc(100vh-4rem)] sm:min-h-[calc(100vh-5rem)] flex items-center justify-center overflow-hidden">
         {/* Background */}
         <div className="absolute inset-0">
           <div
