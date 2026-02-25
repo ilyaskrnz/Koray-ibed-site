@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import { Phone, MapPin, Mail, ArrowUpRight } from "lucide-react";
+import { useLanguage } from "../context/LanguageContext";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const { t } = useLanguage();
 
   return (
     <footer data-testid="footer" className="bg-[#0f172a] border-t border-white/5">
@@ -16,17 +18,16 @@ const Footer = () => {
               className="h-14 w-auto rounded-lg mb-6"
             />
             <p className="text-slate-400 text-sm leading-relaxed max-w-md mb-6">
-              İbed olarak, kaliteli uykunun önemini biliyoruz. Yıllarca süren deneyim ve
-              teknolojik yeniliklerle, size en iyi uyku deneyimini sunmak için çalışıyoruz.
+              {t("footerDescription")}
             </p>
             <p className="text-[#4ecdc4] text-sm font-medium">
-              smart bed, smart sleep
+              {t("slogan")}
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-semibold mb-6">Hızlı Linkler</h4>
+            <h4 className="text-white font-semibold mb-6">{t("quickLinks")}</h4>
             <ul className="space-y-4">
               <li>
                 <Link
@@ -34,8 +35,8 @@ const Footer = () => {
                   data-testid="footer-link-home"
                   className="text-slate-400 hover:text-[#4ecdc4] transition-colors text-sm flex items-center gap-1 group"
                 >
-                  Ana Sayfa
-                  <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  {t("home")}
+                  <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity rtl:rotate-[-90deg]" />
                 </Link>
               </li>
               <li>
@@ -44,8 +45,8 @@ const Footer = () => {
                   data-testid="footer-link-products"
                   className="text-slate-400 hover:text-[#4ecdc4] transition-colors text-sm flex items-center gap-1 group"
                 >
-                  Ürünler
-                  <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  {t("products")}
+                  <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity rtl:rotate-[-90deg]" />
                 </Link>
               </li>
               <li>
@@ -54,8 +55,8 @@ const Footer = () => {
                   data-testid="footer-link-about"
                   className="text-slate-400 hover:text-[#4ecdc4] transition-colors text-sm flex items-center gap-1 group"
                 >
-                  Hakkımızda
-                  <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  {t("about")}
+                  <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity rtl:rotate-[-90deg]" />
                 </Link>
               </li>
               <li>
@@ -64,8 +65,8 @@ const Footer = () => {
                   data-testid="footer-link-contact"
                   className="text-slate-400 hover:text-[#4ecdc4] transition-colors text-sm flex items-center gap-1 group"
                 >
-                  İletişim
-                  <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  {t("contact")}
+                  <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity rtl:rotate-[-90deg]" />
                 </Link>
               </li>
             </ul>
@@ -73,7 +74,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="text-white font-semibold mb-6">İletişim</h4>
+            <h4 className="text-white font-semibold mb-6">{t("contact")}</h4>
             <ul className="space-y-4">
               <li>
                 <a
@@ -104,7 +105,7 @@ const Footer = () => {
                   className="text-slate-400 hover:text-[#4ecdc4] transition-colors text-sm flex items-start gap-3"
                 >
                   <MapPin className="w-4 h-4 mt-0.5 text-[#4ecdc4] flex-shrink-0" />
-                  <span>Kayseri OSB 23. Cad. No:19 Melikgazi/Kayseri</span>
+                  <span>{t("addressValue")}</span>
                 </a>
               </li>
             </ul>
@@ -114,10 +115,10 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-slate-500 text-sm">
-            © {currentYear} İbed. Tüm hakları saklıdır.
+            © {currentYear} İbed. {t("allRightsReserved")}
           </p>
           <p className="text-slate-600 text-xs">
-            Kayseri'de tasarlandı ve üretildi.
+            {t("madeInKayseri")}
           </p>
         </div>
       </div>
