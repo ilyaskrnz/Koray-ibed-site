@@ -50,7 +50,7 @@ const AboutPage = () => {
   };
 
   return (
-    <div data-testid="about-page" className="min-h-screen pt-32 pb-24">
+    <div data-testid="about-page" className="min-h-screen pt-24 sm:pt-28 pb-24">
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 mb-24">
         <motion.div

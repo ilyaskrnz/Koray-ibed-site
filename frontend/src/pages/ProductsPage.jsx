@@ -46,7 +46,7 @@ const ProductsPage = () => {
   ];
 
   return (
-    <div data-testid="products-page" className="min-h-screen pt-32 pb-24">
+    <div data-testid="products-page" className="min-h-screen pt-24 sm:pt-28 pb-24">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
         {/* Header */}
         <motion.div

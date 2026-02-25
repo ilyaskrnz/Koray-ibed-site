@@ -32,7 +32,7 @@ const ProductDetailPage = () => {
 
   if (loading) {
     return (
-      <div data-testid="product-detail-loading" className="min-h-screen pt-32 pb-24">
+      <div data-testid="product-detail-loading" className="min-h-screen pt-24 sm:pt-28 pb-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="aspect-square skeleton rounded-2xl" />
@@ -50,7 +50,7 @@ const ProductDetailPage = () => {
 
   if (!product) {
     return (
-      <div data-testid="product-not-found" className="min-h-screen pt-32 pb-24 flex items-center justify-center">
+      <div data-testid="product-not-found" className="min-h-screen pt-24 sm:pt-28 pb-24 flex items-center justify-center">
         <div className="text-center">
           <h2 className="text-2xl font-bold text-white mb-4">{t("productNotFound")}</h2>
           <Link to="/urunler" className="text-[#4ecdc4] hover:underline">
@@ -66,7 +66,7 @@ const ProductDetailPage = () => {
   );
 
   return (
-    <div data-testid="product-detail-page" className="min-h-screen pt-32 pb-24">
+    <div data-testid="product-detail-page" className="min-h-screen pt-24 sm:pt-28 pb-24">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
         {/* Back Button */}
         <motion.div
