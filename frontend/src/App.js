@@ -8,6 +8,7 @@ import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import WhatsAppButton from "./components/WhatsAppButton";
 import { Toaster } from "./components/ui/sonner";
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             </Routes>
           </main>
           <Footer />
+          <WhatsAppButton />
           <Toaster position="bottom-right" />
         </BrowserRouter>
       </div>
