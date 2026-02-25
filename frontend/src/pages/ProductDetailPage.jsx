@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, Check, Phone } from "lucide-react";
+import { useLanguage } from "../context/LanguageContext";
 import axios from "axios";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
@@ -12,6 +13,7 @@ const ProductDetailPage = () => {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [selectedImage, setSelectedImage] = useState(0);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -50,9 +52,9 @@ const ProductDetailPage = () => {
     return (
       <div data-testid="product-not-found" className="min-h-screen pt-32 pb-24 flex items-center justify-center">
         <div className="text-center">
-          <h2 className="text-2xl font-bold text-white mb-4">Ürün Bulunamadı</h2>
+          <h2 className="text-2xl font-bold text-white mb-4">{t("productNotFound")}</h2>
           <Link to="/urunler" className="text-[#4ecdc4] hover:underline">
-            Ürünlere Dön
+            {t("backToProducts")}
           </Link>
         </div>
       </div>
@@ -78,8 +80,8 @@ const ProductDetailPage = () => {
             data-testid="back-to-products"
             className="inline-flex items-center gap-2 text-slate-400 hover:text-[#4ecdc4] transition-colors"
           >
-            <ArrowLeft className="w-5 h-5" />
-            <span>Ürünlere Dön</span>
+            <ArrowLeft className="w-5 h-5 rtl:rotate-180" />
+            <span>{t("backToProducts")}</span>
           </Link>
         </motion.div>
 
@@ -135,7 +137,7 @@ const ProductDetailPage = () => {
             {/* Category & Title */}
             <div>
               <span className="text-sm text-[#4ecdc4] uppercase tracking-wider mb-2 block">
-                {product.category === "yatak" ? "Yatak" : "Baza"}
+                {product.category === "yatak" ? t("mattress") : t("base")}
               </span>
               <h1 data-testid="product-title" className="text-3xl sm:text-4xl font-bold text-white">
                 {product.name}
@@ -149,7 +151,7 @@ const ProductDetailPage = () => {
 
             {/* Features */}
             <div>
-              <h3 className="text-lg font-semibold text-white mb-4">Özellikler</h3>
+              <h3 className="text-lg font-semibold text-white mb-4">{t("features")}</h3>
               <ul className="space-y-3">
                 {product.features?.map((feature, index) => (
                   <li
@@ -169,7 +171,7 @@ const ProductDetailPage = () => {
             {/* Specifications */}
             {product.specifications && Object.keys(product.specifications).length > 0 && (
               <div>
-                <h3 className="text-lg font-semibold text-white mb-4">Teknik Özellikler</h3>
+                <h3 className="text-lg font-semibold text-white mb-4">{t("specifications")}</h3>
                 <div className="grid grid-cols-2 gap-4">
                   {Object.entries(product.specifications).map(([key, value], index) => (
                     <div
@@ -190,7 +192,7 @@ const ProductDetailPage = () => {
             {/* CTA */}
             <div className="pt-6 border-t border-white/10">
               <p className="text-slate-400 mb-4">
-                Bu ürün hakkında detaylı bilgi almak için bizimle iletişime geçin.
+                {t("contactForInfo")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
@@ -199,14 +201,14 @@ const ProductDetailPage = () => {
                   className="btn-primary inline-flex items-center justify-center gap-2"
                 >
                   <Phone className="w-5 h-5" />
-                  Hemen Ara
+                  {t("callNow")}
                 </a>
                 <Link
                   to="/iletisim"
                   data-testid="product-contact-button"
                   className="btn-secondary inline-flex items-center justify-center"
                 >
-                  Form ile İletişim
+                  {t("formContact")}
                 </Link>
               </div>
             </div>
