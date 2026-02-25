@@ -354,7 +354,7 @@ async def seed_products():
                 "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/mn9uyaok_15.png"
             ],
             "is_featured": False,
-            "order": 6,
+            "order": 7,
             "created_at": datetime.now(timezone.utc).isoformat()
         }
     ]
