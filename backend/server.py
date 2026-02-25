@@ -229,12 +229,12 @@ async def seed_products():
             "order": 3,
             "created_at": datetime.now(timezone.utc).isoformat()
         },
-        # 4. İBED CLASSIC BASE
+        # 4. İBED CLASSIC BASE (Bej - Rustik)
         {
             "id": str(uuid.uuid4()),
             "name": "İBED Classic Base",
             "category": "yatak",
-            "description": "Klasik tasarım, güvenilir kalite. 6 katmanlı yapısı ve Herkül yay sistemi ile sağlam destek. Tek yönlü pedli kullanım özelliği.",
+            "description": "Klasik tasarım, güvenilir kalite. 6 katmanlı yapısı ve Herkül yay sistemi ile sağlam destek. Tek yönlü pedli kullanım özelliği. Bej keten yan bordür ile şık görünüm.",
             "features": [
                 "240gr Örme Kumaş",
                 "300gr Elyaf + 0.8cm Sünger (Kapitone)",
@@ -251,17 +251,47 @@ async def seed_products():
                 "Yan Bordür": "Bej Keten Kumaş",
                 "Ölçüler": "90x190 cm / 150x200 cm"
             },
-            "image_url": "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/333vteli_15.png",
+            "image_url": "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/7h3jxag6_13.png",
             "gallery": [
-                "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/333vteli_15.png",
                 "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/7h3jxag6_13.png",
-                "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/coegq9e1_12.png"
+                "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/pywd3bf9_12.png"
             ],
             "is_featured": False,
             "order": 4,
             "created_at": datetime.now(timezone.utc).isoformat()
         },
-        # 5. İBED POCKET LITE
+        # 5. İBED CLASSIC BASE NAVY (Lacivert)
+        {
+            "id": str(uuid.uuid4()),
+            "name": "İBED Classic Base Navy",
+            "category": "yatak",
+            "description": "Klasik tasarım, modern estetik. 6 katmanlı yapısı ve Herkül yay sistemi ile sağlam destek. Lacivert kadife kumaş ile şık ve zarif görünüm.",
+            "features": [
+                "240gr Örme Kumaş",
+                "300gr Elyaf + 0.8cm Sünger (Kapitone)",
+                "5cm Soft Sünger (Ped Bölgü)",
+                "2cm Sert Sünger",
+                "1200gr Keçe",
+                "Herkül Yay Çekirdeği (Bağlantılı Teller)"
+            ],
+            "specifications": {
+                "Yükseklik": "32-34 cm (Tahmini)",
+                "Yay Sistemi": "Herkül Yay",
+                "Kullanım": "Tek Yönlü (Pedli)",
+                "Kumaş": "240gr Örme Kumaş",
+                "Yan Bordür": "Lacivert Kadife Kumaş",
+                "Ölçüler": "90x190 cm / 150x200 cm"
+            },
+            "image_url": "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/333vteli_15.png",
+            "gallery": [
+                "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/333vteli_15.png",
+                "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/stmmcdh2_14.png"
+            ],
+            "is_featured": False,
+            "order": 5,
+            "created_at": datetime.now(timezone.utc).isoformat()
+        },
+        # 6. İBED POCKET LITE
         {
             "id": str(uuid.uuid4()),
             "name": "İBED Pocket Lite",
