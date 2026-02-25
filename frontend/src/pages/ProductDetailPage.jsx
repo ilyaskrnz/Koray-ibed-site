@@ -13,13 +13,13 @@ const ProductDetailPage = () => {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [selectedImage, setSelectedImage] = useState(0);
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   useEffect(() => {
     const fetchProduct = async () => {
       setLoading(true);
       try {
-        const response = await axios.get(`${API}/products/${id}`);
+        const response = await axios.get(`${API}/products/${id}?lang=${language}`);
         setProduct(response.data);
       } catch (error) {
         console.error("Error fetching product:", error);
@@ -28,7 +28,7 @@ const ProductDetailPage = () => {
       }
     };
     fetchProduct();
-  }, [id]);
+  }, [id, language]);
 
   if (loading) {
     return (
