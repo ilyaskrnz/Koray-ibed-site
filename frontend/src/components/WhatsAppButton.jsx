@@ -7,7 +7,7 @@ const WhatsAppButton = () => {
   const [showTooltip, setShowTooltip] = useState(false);
   const { language } = useLanguage();
 
-  const phoneNumber = "903523211755"; // Turkey country code + number
+  const phoneNumber = "905394671100"; // Turkey country code + number
   
   const messages = {
     tr: "Merhaba, İbed yatak hakkında bilgi almak istiyorum.",
