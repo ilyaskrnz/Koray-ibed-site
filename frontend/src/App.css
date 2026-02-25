@@ -138,10 +138,18 @@ main {
 .emergent-watermark,
 [class*="emergent"],
 div[style*="Made with Emergent"],
-a[href*="emergent.sh"] {
+a[href*="emergent.sh"],
+div[class*="Emergent"],
+div[class*="watermark"],
+[data-emergent],
+div:has(> svg + span:contains("Made with Emergent")),
+body > div:last-child:not(#root):not(.App) {
     display: none !important;
     visibility: hidden !important;
     opacity: 0 !important;
+    pointer-events: none !important;
+    position: absolute !important;
+    left: -9999px !important;
 }
 
 /* RTL Support for Arabic */
