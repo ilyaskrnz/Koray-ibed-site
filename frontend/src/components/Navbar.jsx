@@ -80,6 +80,7 @@ const Navbar = () => {
 
         {/* CTA Button */}
         <div className="hidden md:flex items-center gap-4">
+          <LanguageSwitcher />
           <a
             href="tel:03523211755"
             data-testid="navbar-phone"
