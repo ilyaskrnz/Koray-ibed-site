@@ -2,11 +2,14 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
+import { useLanguage } from "../context/LanguageContext";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,10 +24,10 @@ const Navbar = () => {
   }, [location]);
 
   const navLinks = [
-    { name: "Ana Sayfa", path: "/" },
-    { name: "Ürünler", path: "/urunler" },
-    { name: "Hakkımızda", path: "/hakkimizda" },
-    { name: "İletişim", path: "/iletisim" },
+    { name: t("home"), path: "/" },
+    { name: t("products"), path: "/urunler" },
+    { name: t("about"), path: "/hakkimizda" },
+    { name: t("contact"), path: "/iletisim" },
   ];
 
   const isActive = (path) => location.pathname === path;
