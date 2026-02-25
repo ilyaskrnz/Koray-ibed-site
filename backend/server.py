@@ -321,7 +321,7 @@ async def seed_products():
                 "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/6sb3wh8r_13.png"
             ],
             "is_featured": False,
-            "order": 5,
+            "order": 6,
             "created_at": datetime.now(timezone.utc).isoformat()
         },
         # 6. İBED SMART POCKET
