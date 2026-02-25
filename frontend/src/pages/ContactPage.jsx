@@ -2,12 +2,14 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Send, Check } from "lucide-react";
 import { toast } from "sonner";
+import { useLanguage } from "../context/LanguageContext";
 import axios from "axios";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
 
 const ContactPage = () => {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -29,7 +31,7 @@ const ContactPage = () => {
     try {
       await axios.post(`${API}/contact`, formData);
       setSubmitted(true);
-      toast.success("Mesajınız başarıyla gönderildi!");
+      toast.success(t("messageSent"));
       setFormData({
         name: "",
         email: "",
@@ -39,7 +41,7 @@ const ContactPage = () => {
       });
     } catch (error) {
       console.error("Error sending message:", error);
-      toast.error("Mesaj gönderilirken bir hata oluştu.");
+      toast.error(t("messageError"));
     } finally {
       setLoading(false);
     }
@@ -48,20 +50,20 @@ const ContactPage = () => {
   const contactInfo = [
     {
       icon: Phone,
-      title: "Telefon",
+      title: t("phone"),
       value: "0352 321 17 55",
       href: "tel:03523211755",
     },
     {
       icon: Mail,
-      title: "E-posta",
+      title: t("email"),
       value: "info@ibed.com.tr",
       href: "mailto:info@ibed.com.tr",
     },
     {
       icon: MapPin,
-      title: "Adres",
-      value: "Kayseri OSB 23. Cad. No:19 Melikgazi/Kayseri",
+      title: t("address"),
+      value: t("addressValue"),
       href: "https://maps.google.com/?q=Kayseri+OSB+23.+Cad.+No:19+Melikgazi/Kayseri",
     },
   ];
@@ -77,13 +79,13 @@ const ContactPage = () => {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <span className="inline-block px-4 py-2 rounded-full bg-[#4ecdc4]/10 border border-[#4ecdc4]/30 text-[#4ecdc4] text-sm font-medium mb-6">
-            İletişim
+            {t("contact")}
           </span>
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-            Bizimle İletişime Geçin
+            {t("contactTitle")}
           </h1>
           <p className="text-slate-400 text-lg">
-            Sorularınız, önerileriniz veya bayilik başvurularınız için bize ulaşın.
+            {t("contactDescription")}
           </p>
         </motion.div>
 
@@ -148,17 +150,17 @@ const ContactPage = () => {
                     <Check className="w-8 h-8 text-[#4ecdc4]" />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">
-                    Mesajınız Alındı!
+                    {t("messageReceived")}
                   </h3>
                   <p className="text-slate-400 mb-6">
-                    En kısa sürede sizinle iletişime geçeceğiz.
+                    {t("willContact")}
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
                     data-testid="send-another-message"
                     className="text-[#4ecdc4] hover:underline"
                   >
-                    Yeni Mesaj Gönder
+                    {t("sendAnother")}
                   </button>
                 </motion.div>
               ) : (
@@ -166,7 +168,7 @@ const ContactPage = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-slate-300 mb-2">
-                        Adınız Soyadınız *
+                        {t("yourName")} *
                       </label>
                       <input
                         type="text"
@@ -176,12 +178,12 @@ const ContactPage = () => {
                         required
                         data-testid="contact-name"
                         className="input-field"
-                        placeholder="Adınız Soyadınız"
+                        placeholder={t("yourName")}
                       />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-slate-300 mb-2">
-                        E-posta *
+                        {t("yourEmail")} *
                       </label>
                       <input
                         type="email"
@@ -199,7 +201,7 @@ const ContactPage = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-slate-300 mb-2">
-                        Telefon
+                        {t("yourPhone")}
                       </label>
                       <input
                         type="tel"
@@ -213,7 +215,7 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-slate-300 mb-2">
-                        Konu *
+                        {t("subject")} *
                       </label>
                       <input
                         type="text"
@@ -223,14 +225,14 @@ const ContactPage = () => {
                         required
                         data-testid="contact-subject"
                         className="input-field"
-                        placeholder="Mesaj konusu"
+                        placeholder={t("subject")}
                       />
                     </div>
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-slate-300 mb-2">
-                      Mesajınız *
+                      {t("message")} *
                     </label>
                     <textarea
                       name="message"
@@ -240,7 +242,7 @@ const ContactPage = () => {
                       rows={5}
                       data-testid="contact-message"
                       className="input-field resize-none"
-                      placeholder="Mesajınızı buraya yazın..."
+                      placeholder={t("message")}
                     />
                   </div>
 
@@ -253,12 +255,12 @@ const ContactPage = () => {
                     {loading ? (
                       <>
                         <div className="w-5 h-5 border-2 border-[#020617]/30 border-t-[#020617] rounded-full animate-spin" />
-                        Gönderiliyor...
+                        {t("sending")}
                       </>
                     ) : (
                       <>
                         <Send className="w-5 h-5" />
-                        Mesaj Gönder
+                        {t("sendMessage")}
                       </>
                     )}
                   </button>
