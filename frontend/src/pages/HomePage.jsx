@@ -1,23 +1,26 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, Shield, Zap, Award } from "lucide-react";
+import { useLanguage } from "../context/LanguageContext";
 
 const HomePage = () => {
+  const { t } = useLanguage();
+
   const features = [
     {
       icon: Shield,
-      title: "Garanti",
-      description: "20 yıla kadar garanti ile güvenli alışveriş",
+      title: t("guarantee"),
+      description: t("guaranteeDesc"),
     },
     {
       icon: Zap,
-      title: "Teknoloji",
-      description: "En son uyku teknolojileri ile üretim",
+      title: t("technology"),
+      description: t("technologyDesc"),
     },
     {
       icon: Award,
-      title: "Kalite",
-      description: "Premium malzemeler ve işçilik",
+      title: t("quality"),
+      description: t("qualityDesc"),
     },
   ];
 
@@ -43,7 +46,7 @@ const HomePage = () => {
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: `url('https://images.unsplash.com/photo-1648634158203-199accfd7afc?crop=entropy&cs=srgb&fm=jpg&q=85')`,
+              backgroundImage: `url('https://customer-assets.emergentagent.com/job_ibed-store/artifacts/634ni718_10.png')`,
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#020617]/70 via-[#020617]/60 to-[#020617]" />
@@ -59,7 +62,7 @@ const HomePage = () => {
         >
           <motion.div variants={itemVariants} className="mb-6">
             <span className="inline-block px-4 py-2 rounded-full bg-[#4ecdc4]/10 border border-[#4ecdc4]/30 text-[#4ecdc4] text-sm font-medium">
-              smart bed, smart sleep
+              {t("slogan")}
             </span>
           </motion.div>
 
@@ -67,17 +70,15 @@ const HomePage = () => {
             variants={itemVariants}
             className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight"
           >
-            Hayalinizdeki
-            <span className="block text-[#4ecdc4] text-glow">Uyku Deneyimi</span>
+            {t("heroTitle1")}
+            <span className="block text-[#4ecdc4] text-glow">{t("heroTitle2")}</span>
           </motion.h1>
 
           <motion.p
             variants={itemVariants}
             className="text-base md:text-lg text-slate-300 max-w-2xl mx-auto mb-10"
           >
-            İbed ile kaliteli uykunun keyfini çıkarın. Yenilikçi teknolojiler ve 
-            üstün malzeme kalitesiyle üretilen yatak ve bazalarımız, size hak 
-            ettiğiniz dinlenmeyi sunar.
+            {t("heroDescription")}
           </motion.p>
 
           <motion.div
@@ -89,15 +90,15 @@ const HomePage = () => {
               data-testid="hero-cta-products"
               className="btn-primary inline-flex items-center justify-center gap-2 group"
             >
-              Ürünleri Keşfet
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              {t("exploreProducts")}
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform rtl:rotate-180 rtl:group-hover:-translate-x-1" />
             </Link>
             <Link
               to="/iletisim"
               data-testid="hero-cta-contact"
               className="btn-secondary inline-flex items-center justify-center"
             >
-              İletişime Geç
+              {t("contactUs")}
             </Link>
           </motion.div>
         </motion.div>
@@ -130,10 +131,10 @@ const HomePage = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Neden <span className="text-[#4ecdc4]">İbed</span>?
+              {t("whyIbed")} <span className="text-[#4ecdc4]">İbed</span>?
             </h2>
             <p className="text-slate-400 max-w-xl mx-auto">
-              Kaliteli uykunun sırrı, doğru yatak seçiminden geçer
+              {t("heroDescription").slice(0, 50)}...
             </p>
           </motion.div>
 
@@ -173,11 +174,10 @@ const HomePage = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Kaliteli Uykunun <span className="text-[#4ecdc4]">Adresi</span>
+              {t("ctaTitle1")} <span className="text-[#4ecdc4]">{t("ctaTitle2")}</span>
             </h2>
             <p className="text-slate-400 text-lg mb-10 max-w-2xl mx-auto">
-              Size en uygun yatak ve baza modellerini keşfetmek için hemen iletişime
-              geçin. Uzman ekibimiz size yardımcı olmaktan mutluluk duyacaktır.
+              {t("ctaDescription")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -192,7 +192,7 @@ const HomePage = () => {
                 data-testid="cta-contact"
                 className="btn-secondary inline-flex items-center justify-center"
               >
-                Form ile İletişim
+                {t("formContact")}
               </Link>
             </div>
           </motion.div>
