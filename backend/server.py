@@ -287,6 +287,66 @@ async def seed_products():
             "is_featured": False,
             "order": 5,
             "created_at": datetime.now(timezone.utc).isoformat()
+        },
+        # 6. İBED SMART POCKET
+        {
+            "id": str(uuid.uuid4()),
+            "name": "İBED Smart Pocket",
+            "category": "yatak",
+            "description": "Akıllı tasarım, akıllı uyku. 6 katmanlı yapısı ve torba yay sistemi ile uygun fiyatlı premium konfor. Çift yönlü kullanım ve Roll-Pack uygunluğu.",
+            "features": [
+                "180gr Örme Kumaş (Beyaz)",
+                "90gr Elyaf + 0.8cm Sünger (Kapitone)",
+                "2cm Soft Sünger",
+                "1000gr Keçe",
+                "Torba Paket Yay Çekirdeği",
+                "Alt Taraf Simetrisi"
+            ],
+            "specifications": {
+                "Yükseklik": "25 cm (Tahmini)",
+                "Yay Sistemi": "Torba Yay",
+                "Kullanım": "Çift Yönlü",
+                "Kumaş": "180gr Örme Kumaş",
+                "Yan Bordür": "Jakarlı Kumaş",
+                "Roll-Pack": "Uygun",
+                "Ölçüler": "90x150 cm / 150x200 cm"
+            },
+            "image_url": "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/aiw38sv7_14.png",
+            "gallery": [
+                "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/aiw38sv7_14.png"
+            ],
+            "is_featured": False,
+            "order": 6,
+            "created_at": datetime.now(timezone.utc).isoformat()
+        },
+        # 7. İBED ECONOMY (En ekonomik model)
+        {
+            "id": str(uuid.uuid4()),
+            "name": "İBED Economy",
+            "category": "yatak",
+            "description": "Ekonomik fiyat, kaliteli uyku. Temel konfor ihtiyaçlarını karşılayan giriş seviye yatak modeli. Dayanıklı yapısı ile uzun ömürlü kullanım.",
+            "features": [
+                "Örme Kumaş Kaplama",
+                "Elyaf + Sünger Kapitone",
+                "Soft Sünger Katmanı",
+                "Sert Keçe Destek",
+                "Bonnel Yay Çekirdeği",
+                "Ekonomik Fiyat Avantajı"
+            ],
+            "specifications": {
+                "Yükseklik": "20-22 cm (Tahmini)",
+                "Yay Sistemi": "Bonnel Yay",
+                "Kullanım": "Tek Yönlü",
+                "Kumaş": "Örme Kumaş",
+                "Ölçüler": "90x190 cm / 150x200 cm"
+            },
+            "image_url": "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/mn9uyaok_15.png",
+            "gallery": [
+                "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/mn9uyaok_15.png"
+            ],
+            "is_featured": False,
+            "order": 7,
+            "created_at": datetime.now(timezone.utc).isoformat()
         }
     ]
     
