@@ -324,7 +324,7 @@ async def seed_products():
             "order": 6,
             "created_at": datetime.now(timezone.utc).isoformat()
         },
-        # 6. İBED SMART POCKET
+        # 7. İBED SMART POCKET
         {
             "id": str(uuid.uuid4()),
             "name": "İBED Smart Pocket",
