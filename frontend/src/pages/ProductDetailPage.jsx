@@ -97,7 +97,7 @@ const ProductDetailPage = () => {
                 src={allImages[selectedImage]}
                 alt={product.name}
                 data-testid="product-main-image"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain p-4"
               />
             </div>
             {/* Thumbnails */}
