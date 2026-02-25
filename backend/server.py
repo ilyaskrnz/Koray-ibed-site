@@ -156,8 +156,9 @@ async def seed_products():
                 "Yan Bordür": "Siyah (Petek Desenli)",
                 "Ölçüler": "90x190 cm / 150x200 cm"
             },
-            "image_url": "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/6g0ryq3y_en%20konforlu%20.png",
+            "image_url": "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/634ni718_10.png",
             "gallery": [
+                "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/634ni718_10.png",
                 "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/6g0ryq3y_en%20konforlu%20.png"
             ],
             "is_featured": True,
@@ -187,8 +188,9 @@ async def seed_products():
                 "Desen": "Baklava/Petek",
                 "Ölçüler": "90x190 cm / 150x200 cm"
             },
-            "image_url": "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/3cqur0hd_10.png",
+            "image_url": "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/ud9rmqex_11.png",
             "gallery": [
+                "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/ud9rmqex_11.png",
                 "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/3cqur0hd_10.png"
             ],
             "is_featured": True,
@@ -218,8 +220,9 @@ async def seed_products():
                 "Yan Bordür": "Gri Keten",
                 "Ölçüler": "90x190 cm / 150x200 cm"
             },
-            "image_url": "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/75xxs6tb_11.png",
+            "image_url": "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/rfp4t1a3_12.png",
             "gallery": [
+                "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/rfp4t1a3_12.png",
                 "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/75xxs6tb_11.png"
             ],
             "is_featured": True,
@@ -248,8 +251,9 @@ async def seed_products():
                 "Yan Bordür": "Bej Keten Kumaş",
                 "Ölçüler": "90x190 cm / 150x200 cm"
             },
-            "image_url": "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/coegq9e1_12.png",
+            "image_url": "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/7h3jxag6_13.png",
             "gallery": [
+                "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/7h3jxag6_13.png",
                 "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/coegq9e1_12.png"
             ],
             "is_featured": False,
@@ -280,8 +284,9 @@ async def seed_products():
                 "Roll-Pack": "Uygun",
                 "Ölçüler": "90x180 cm / 150x200 cm"
             },
-            "image_url": "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/6sb3wh8r_13.png",
+            "image_url": "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/xyhkhbei_14.png",
             "gallery": [
+                "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/xyhkhbei_14.png",
                 "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/6sb3wh8r_13.png"
             ],
             "is_featured": False,
