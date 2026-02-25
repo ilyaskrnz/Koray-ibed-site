@@ -136,7 +136,7 @@ const Navbar = () => {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.4 }}
-                className="pt-4 border-t border-white/10"
+                className="pt-4 border-t border-white/10 flex items-center justify-between"
               >
                 <a
                   href="tel:03523211755"
@@ -145,6 +145,7 @@ const Navbar = () => {
                   <Phone className="w-5 h-5" />
                   <span className="font-medium">0352 321 17 55</span>
                 </a>
+                <LanguageSwitcher />
               </motion.div>
             </div>
           </motion.div>
