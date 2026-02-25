@@ -125,11 +125,11 @@ const ProductsPage = () => {
                   data-testid={`product-card-${index}`}
                   className="product-card card-product block group"
                 >
-                  <div className="aspect-[4/3] overflow-hidden relative">
+                  <div className="aspect-square overflow-hidden relative bg-[#0f172a]">
                     <img
                       src={product.image_url}
                       alt={product.name}
-                      className="product-card-image w-full h-full object-cover"
+                      className="product-card-image w-full h-full object-contain p-2"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#020617]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
