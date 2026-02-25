@@ -133,6 +133,17 @@ main {
     border-radius: 2px;
 }
 
+/* Hide Emergent watermark */
+[data-testid="emergent-watermark"],
+.emergent-watermark,
+[class*="emergent"],
+div[style*="Made with Emergent"],
+a[href*="emergent.sh"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
 /* RTL Support for Arabic */
 [dir="rtl"] {
     text-align: right;
