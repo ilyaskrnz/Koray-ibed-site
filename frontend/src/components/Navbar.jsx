@@ -79,26 +79,25 @@ const Navbar = () => {
         </div>
 
         {/* CTA Button */}
-        <div className="hidden md:flex items-center gap-4">
+        <div className="flex items-center gap-3">
           <LanguageSwitcher />
           <a
             href="tel:03523211755"
             data-testid="navbar-phone"
-            className="flex items-center gap-2 text-sm font-medium text-[#4ecdc4] hover:text-[#2dd4bf] transition-colors"
+            className="hidden md:flex items-center gap-2 text-sm font-medium text-[#4ecdc4] hover:text-[#2dd4bf] transition-colors"
           >
             <Phone className="w-4 h-4" />
             <span>0352 321 17 55</span>
           </a>
+          {/* Mobile Menu Button */}
+          <button
+            data-testid="mobile-menu-button"
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden p-2 text-white hover:text-[#4ecdc4] transition-colors"
+          >
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
-
-        {/* Mobile Menu Button */}
-        <button
-          data-testid="mobile-menu-button"
-          onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden p-2 text-white hover:text-[#4ecdc4] transition-colors"
-        >
-          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
       </div>
 
       {/* Mobile Menu */}
