@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { useLanguage } from "../context/LanguageContext";
 import axios from "axios";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
@@ -12,6 +13,7 @@ const ProductsPage = () => {
   const [loading, setLoading] = useState(true);
   const [searchParams, setSearchParams] = useSearchParams();
   const activeCategory = searchParams.get("kategori") || "all";
+  const { t } = useLanguage();
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -38,9 +40,9 @@ const ProductsPage = () => {
   };
 
   const categories = [
-    { id: "all", name: "Tümü" },
-    { id: "yatak", name: "Yatak" },
-    { id: "baza", name: "Baza" },
+    { id: "all", name: t("all") },
+    { id: "yatak", name: t("mattress") },
+    { id: "baza", name: t("base") },
   ];
 
   return (
@@ -54,10 +56,10 @@ const ProductsPage = () => {
           className="text-center mb-16"
         >
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-            Ürünlerimiz
+            {t("ourProducts")}
           </h1>
           <p className="text-slate-400 max-w-xl mx-auto">
-            Kaliteli uyku için tasarlanmış yatak ve baza koleksiyonumuz
+            {t("productsDescription")}
           </p>
         </motion.div>
 
@@ -89,7 +91,7 @@ const ProductsPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[1, 2, 3, 4, 5, 6].map((i) => (
               <div key={i} className="card-product animate-pulse">
-                <div className="aspect-[4/3] skeleton" />
+                <div className="aspect-square skeleton" />
                 <div className="p-6">
                   <div className="h-4 skeleton rounded w-1/4 mb-3" />
                   <div className="h-6 skeleton rounded mb-3" />
@@ -104,7 +106,7 @@ const ProductsPage = () => {
             animate={{ opacity: 1 }}
             className="text-center py-20"
           >
-            <p className="text-slate-400 text-lg">Bu kategoride ürün bulunamadı.</p>
+            <p className="text-slate-400 text-lg">{t("noProducts")}</p>
           </motion.div>
         ) : (
           <motion.div
@@ -132,16 +134,16 @@ const ProductsPage = () => {
                       className="product-card-image w-full h-full object-contain p-2"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#020617]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+                    <div className="absolute bottom-4 right-4 rtl:right-auto rtl:left-4 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
                       <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#4ecdc4] text-[#020617] text-sm font-medium">
-                        Detaylar
-                        <ArrowRight className="w-4 h-4" />
+                        {t("details")}
+                        <ArrowRight className="w-4 h-4 rtl:rotate-180" />
                       </span>
                     </div>
                   </div>
                   <div className="p-6">
                     <span className="text-xs text-[#4ecdc4] uppercase tracking-wider mb-2 block">
-                      {product.category === "yatak" ? "Yatak" : "Baza"}
+                      {product.category === "yatak" ? t("mattress") : t("base")}
                     </span>
                     <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-[#4ecdc4] transition-colors">
                       {product.name}
