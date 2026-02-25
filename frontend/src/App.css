@@ -133,6 +133,39 @@ main {
     border-radius: 2px;
 }
 
+/* RTL Support for Arabic */
+[dir="rtl"] {
+    text-align: right;
+}
+
+[dir="rtl"] .rtl\:rotate-180 {
+    transform: rotate(180deg);
+}
+
+[dir="rtl"] .rtl\:rotate-\[-90deg\] {
+    transform: rotate(-90deg);
+}
+
+[dir="rtl"] .rtl\:-translate-x-1:hover {
+    transform: translateX(-0.25rem);
+}
+
+[dir="rtl"] .rtl\:right-auto {
+    right: auto;
+}
+
+[dir="rtl"] .rtl\:left-4 {
+    left: 1rem;
+}
+
+[dir="rtl"] .rtl\:-right-6 {
+    right: -1.5rem;
+}
+
+[dir="rtl"] .rtl\:left-auto {
+    left: auto;
+}
+
 /* Mobile menu animation */
 .mobile-menu-enter {
     opacity: 0;
