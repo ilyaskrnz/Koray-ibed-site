@@ -133,191 +133,159 @@ async def seed_products():
         return {"message": "Ürünler zaten mevcut", "count": count}
     
     products = [
-        # YATAK (Mattress) Products
+        # 1. İBED ROYAL LUXURY POCKET - En Kaliteli
         {
             "id": str(uuid.uuid4()),
-            "name": "Premium Ortopedik Yatak",
+            "name": "İBED Royal Luxury Pocket",
             "category": "yatak",
-            "description": "Yüksek yoğunluklu bellek köpüğü ile üstün konfor ve omurga desteği sağlar. 7 bölgeli ergonomik yapısı ile vücudunuzun her noktasına özel destek sunar.",
+            "description": "En üst segment yatak modelimiz. 7 katmanlı özel yapısı ile eşsiz konfor ve destek sağlar. Torba paket yay çekirdeği ile bağımsız destek teknolojisi sunar.",
             "features": [
-                "7 Bölgeli Ergonomik Tasarım",
-                "Yüksek Yoğunluklu Bellek Köpüğü",
-                "Sıcaklık Dengeleyici Teknoloji",
-                "Anti-Alerjik Kumaş",
-                "10 Yıl Garanti"
+                "Kapitone Katmanı (380gr Örme Kumaş + 400gr Deve/Koyun Yünü + 0.8cm Sünger)",
+                "2cm At Kılı",
+                "5cm Lateks",
+                "2cm 28dns Soft Sünger",
+                "2cm (1000gr) Hindistan Cevizi Lifi",
+                "1000gr Vatka",
+                "Torba Paket Yay Çekirdeği (Bağımsız Destek)"
             ],
             "specifications": {
-                "Yükseklik": "30 cm",
-                "Sertlik": "Orta-Sert",
-                "Kumaş": "Örme Viskon",
-                "Dolgu": "Yüksek Yoğunluklu Sünger"
+                "Yükseklik": "35-38 cm (Tahmini)",
+                "Yay Sistemi": "Torba Paket Yay",
+                "Kullanım": "Tek Yönlü",
+                "Kumaş": "380gr Örme Kumaş",
+                "Yan Bordür": "Siyah (Petek Desenli)",
+                "Ölçüler": "90x190 cm / 150x200 cm"
             },
-            "image_url": "https://images.unsplash.com/photo-1648634158203-199accfd7afc?crop=entropy&cs=srgb&fm=jpg&q=85",
+            "image_url": "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/6g0ryq3y_en%20konforlu%20.png",
             "gallery": [
-                "https://images.unsplash.com/photo-1648634158203-199accfd7afc?crop=entropy&cs=srgb&fm=jpg&q=85",
-                "https://images.pexels.com/photos/4177628/pexels-photo-4177628.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/6g0ryq3y_en%20konforlu%20.png"
             ],
             "is_featured": True,
             "order": 1,
             "created_at": datetime.now(timezone.utc).isoformat()
         },
+        # 2. İBED LUXURY POCKET
         {
             "id": str(uuid.uuid4()),
-            "name": "Smart Sleep Yatak",
+            "name": "İBED Luxury Pocket",
             "category": "yatak",
-            "description": "Akıllı uyku teknolojisi ile donatılmış, vücut hareketlerinize uyum sağlayan dinamik yatak. Gece boyu ideal uyku pozisyonu için otomatik ayarlama yapar.",
+            "description": "Premium segment yatak modelimiz. 6 katmanlı yapısı ve çift yönlü kullanım özelliği ile uzun ömürlü konfor. Torba paket yay sistemi ile bağımsız destek sağlar.",
             "features": [
-                "Dinamik Destek Sistemi",
-                "Hava Kanallı Yapı",
-                "Çift Taraflı Kullanım",
-                "Nem Dengeleyici",
-                "15 Yıl Garanti"
+                "400gr Tavşantüyü Kumaş (Beyaz) + 300gr Elyaf + 1.5cm Sünger (Kapitone)",
+                "2cm Soft Sünger",
+                "2cm Sert Sünger",
+                "2cm Thermobont Vatka",
+                "Torba Paket Yay Çekirdeği (Bağımsız Destek)",
+                "Alt Taraf Simetrisi (Katmanlar 1-4 Tekrar)"
             ],
             "specifications": {
-                "Yükseklik": "35 cm",
-                "Sertlik": "Ayarlanabilir",
-                "Kumaş": "Bambu Karışımlı",
-                "Dolgu": "Latex + Bellek Köpük"
+                "Yükseklik": "37-40 cm (Tahmini)",
+                "Yay Sistemi": "Torba Paket Yay",
+                "Kullanım": "Çift Yönlü",
+                "Kumaş": "Tavşantüyü Örme Kumaş",
+                "Renk Seçenekleri": "Bej, Gri, Kahverengi, Beyaz",
+                "Desen": "Baklava/Petek",
+                "Ölçüler": "90x190 cm / 150x200 cm"
             },
-            "image_url": "https://images.pexels.com/photos/7598137/pexels-photo-7598137.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "image_url": "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/3cqur0hd_10.png",
             "gallery": [
-                "https://images.pexels.com/photos/7598137/pexels-photo-7598137.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-                "https://images.unsplash.com/photo-1664347760452-6d5d22d6155a?crop=entropy&cs=srgb&fm=jpg&q=85"
+                "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/3cqur0hd_10.png"
             ],
             "is_featured": True,
             "order": 2,
             "created_at": datetime.now(timezone.utc).isoformat()
         },
+        # 3. İBED TITANIUM SUPPORT
         {
             "id": str(uuid.uuid4()),
-            "name": "Natural Latex Yatak",
+            "name": "İBED Titanium Support",
             "category": "yatak",
-            "description": "100% doğal latex ile üretilmiş, çevre dostu ve sağlıklı uyku deneyimi. Doğal hava sirkülasyonu ile yaz-kış konforlu uyku.",
+            "description": "Sarsılmaz Destek, Modern Estetik. 7 katmanlı yapısı ve güçlendirilmiş Herkül yay sistemi ile ekstra dayanıklılık ve destek sunar. Çift yönlü kullanım özelliği.",
             "features": [
-                "100% Doğal Latex",
-                "Eko-Sertifikalı",
-                "Doğal Antimikrobiyal",
-                "Pin-Hole Teknolojisi",
-                "20 Yıl Garanti"
+                "240gr Örme Kumaş (Modern Desen)",
+                "300gr Elyaf + 1.5cm Soft Sünger (Kapitone)",
+                "2cm Soft Sünger",
+                "2cm Sert Sünger",
+                "1200gr Sert Keçe",
+                "Herkül Yay Çekirdeği (Bağlantılı Teller)",
+                "Alt Taraf Simetrisi"
             ],
             "specifications": {
-                "Yükseklik": "28 cm",
-                "Sertlik": "Orta",
-                "Kumaş": "Organik Pamuk",
-                "Dolgu": "Doğal Latex"
+                "Yükseklik": "32-34 cm (Tahmini)",
+                "Yay Sistemi": "Herkül Yay (Güçlendirilmiş)",
+                "Kullanım": "Çift Yönlü",
+                "Kumaş": "240gr Örme Kumaş",
+                "Yan Bordür": "Gri Keten",
+                "Ölçüler": "90x190 cm / 150x200 cm"
             },
-            "image_url": "https://images.unsplash.com/photo-1663811397302-8268848ca312?crop=entropy&cs=srgb&fm=jpg&q=85",
+            "image_url": "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/75xxs6tb_11.png",
             "gallery": [
-                "https://images.unsplash.com/photo-1663811397302-8268848ca312?crop=entropy&cs=srgb&fm=jpg&q=85"
+                "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/75xxs6tb_11.png"
             ],
-            "is_featured": False,
+            "is_featured": True,
             "order": 3,
             "created_at": datetime.now(timezone.utc).isoformat()
         },
+        # 4. İBED CLASSIC BASE
         {
             "id": str(uuid.uuid4()),
-            "name": "Comfort Plus Yatak",
+            "name": "İBED Classic Base",
             "category": "yatak",
-            "description": "Ekonomik fiyatıyla kaliteli uyku arayanlar için ideal seçim. Dayanıklı yapısı ve konforlu dolgusu ile uzun ömürlü kullanım.",
+            "description": "Klasik tasarım, güvenilir kalite. 6 katmanlı yapısı ve Herkül yay sistemi ile sağlam destek. Tek yönlü pedli kullanım özelliği.",
             "features": [
-                "Ekonomik Fiyat",
-                "Dayanıklı Yapı",
-                "Kolay Bakım",
-                "Parlak Kumaş",
-                "5 Yıl Garanti"
+                "240gr Örme Kumaş",
+                "300gr Elyaf + 0.8cm Sünger (Kapitone)",
+                "5cm Soft Sünger (Ped Bölgü)",
+                "2cm Sert Sünger",
+                "1200gr Keçe",
+                "Herkül Yay Çekirdeği (Bağlantılı Teller)"
             ],
             "specifications": {
-                "Yükseklik": "25 cm",
-                "Sertlik": "Sert",
-                "Kumaş": "Jakarlı",
-                "Dolgu": "Bonnel Yay + Sünger"
+                "Yükseklik": "32-34 cm (Tahmini)",
+                "Yay Sistemi": "Herkül Yay",
+                "Kullanım": "Tek Yönlü (Pedli)",
+                "Kumaş": "240gr Örme Kumaş",
+                "Yan Bordür": "Bej Keten Kumaş",
+                "Ölçüler": "90x190 cm / 150x200 cm"
             },
-            "image_url": "https://images.unsplash.com/photo-1742319096912-7bb94fdfeb03?crop=entropy&cs=srgb&fm=jpg&q=85",
+            "image_url": "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/coegq9e1_12.png",
             "gallery": [
-                "https://images.unsplash.com/photo-1742319096912-7bb94fdfeb03?crop=entropy&cs=srgb&fm=jpg&q=85"
+                "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/coegq9e1_12.png"
             ],
             "is_featured": False,
             "order": 4,
             "created_at": datetime.now(timezone.utc).isoformat()
         },
-        # BAZA Products
+        # 5. İBED POCKET LITE
         {
             "id": str(uuid.uuid4()),
-            "name": "Modern Sandıklı Baza",
-            "category": "baza",
-            "description": "Geniş depolama alanı ve şık tasarımıyla yatak odanıza modernlik katar. Hidrolik piston sistemi ile kolay açılır kapanır.",
+            "name": "İBED Pocket Lite",
+            "category": "yatak",
+            "description": "Ekonomik fiyat, torba yay konforu. 7 katmanlı yapısı ve torba paket yay sistemi ile bütçe dostu premium deneyim. Çift yönlü kullanım ve Roll-Pack uygunluğu.",
             "features": [
-                "Hidrolik Piston Sistemi",
-                "Geniş Depolama Alanı",
-                "Metal Çerçeve",
-                "Su Geçirmez Kumaş",
-                "10 Yıl Garanti"
+                "180gr Örme Kumaş (Beyaz)",
+                "150gr Elyaf + 0.8cm Sünger (Kapitone)",
+                "2cm Soft Sünger",
+                "2cm Sert Sünger",
+                "1000gr Beyaz Keçe",
+                "Torba Paket Yay Çekirdeği",
+                "Alt Taraf Simetrisi"
             ],
             "specifications": {
-                "Yükseklik": "45 cm",
-                "Malzeme": "MDF + Metal",
-                "Kumaş": "Kadife",
-                "Depolama": "320 Litre"
+                "Yükseklik": "28-30 cm (Tahmini)",
+                "Yay Sistemi": "Torba Yay",
+                "Kullanım": "Çift Yönlü",
+                "Kumaş": "180gr Örme Kumaş",
+                "Yan Bordür": "Kahverengi Petek Kumaş",
+                "Roll-Pack": "Uygun",
+                "Ölçüler": "90x180 cm / 150x200 cm"
             },
-            "image_url": "https://images.unsplash.com/photo-1737467042207-7fc6318d3e5b?crop=entropy&cs=srgb&fm=jpg&q=85",
+            "image_url": "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/6sb3wh8r_13.png",
             "gallery": [
-                "https://images.unsplash.com/photo-1737467042207-7fc6318d3e5b?crop=entropy&cs=srgb&fm=jpg&q=85",
-                "https://images.unsplash.com/photo-1698517486200-e89403ea2738?crop=entropy&cs=srgb&fm=jpg&q=85"
-            ],
-            "is_featured": True,
-            "order": 5,
-            "created_at": datetime.now(timezone.utc).isoformat()
-        },
-        {
-            "id": str(uuid.uuid4()),
-            "name": "Başlıklı Premium Baza",
-            "category": "baza",
-            "description": "Entegre başlık tasarımı ile şık ve fonksiyonel. Yüksek kalite döşeme kumaşı ve sağlam yapısıyla yıllar boyu kullanım.",
-            "features": [
-                "Entegre Başlık",
-                "Premium Döşeme",
-                "Güçlendirilmiş Yapı",
-                "Kolay Kurulum",
-                "15 Yıl Garanti"
-            ],
-            "specifications": {
-                "Yükseklik": "50 cm (Başlık dahil 120 cm)",
-                "Malzeme": "Masif Ahşap + MDF",
-                "Kumaş": "Şönil",
-                "Başlık Tipi": "Kapitone"
-            },
-            "image_url": "https://images.unsplash.com/photo-1698517486200-e89403ea2738?crop=entropy&cs=srgb&fm=jpg&q=85",
-            "gallery": [
-                "https://images.unsplash.com/photo-1698517486200-e89403ea2738?crop=entropy&cs=srgb&fm=jpg&q=85"
-            ],
-            "is_featured": True,
-            "order": 6,
-            "created_at": datetime.now(timezone.utc).isoformat()
-        },
-        {
-            "id": str(uuid.uuid4()),
-            "name": "Minimalist Baza",
-            "category": "baza",
-            "description": "Sade ve şık tasarımıyla modern yatak odaları için ideal. İnce profili ile mekanda ferahlık hissi yaratır.",
-            "features": [
-                "Minimalist Tasarım",
-                "İnce Profil",
-                "Güçlü Destek",
-                "Kolay Temizlik",
-                "8 Yıl Garanti"
-            ],
-            "specifications": {
-                "Yükseklik": "35 cm",
-                "Malzeme": "Metal Çerçeve",
-                "Kumaş": "Microfiber",
-                "Ayak": "Metal Silindir"
-            },
-            "image_url": "https://images.unsplash.com/photo-1769690399055-6cac5380d470?crop=entropy&cs=srgb&fm=jpg&q=85",
-            "gallery": [
-                "https://images.unsplash.com/photo-1769690399055-6cac5380d470?crop=entropy&cs=srgb&fm=jpg&q=85"
+                "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/6sb3wh8r_13.png"
             ],
             "is_featured": False,
-            "order": 7,
+            "order": 5,
             "created_at": datetime.now(timezone.utc).isoformat()
         }
     ]
