@@ -1,0 +1,143 @@
+{
+  "brand_identity": {
+    "name": "İbed",
+    "slogan": "smart bed, smart sleep",
+    "tone": "Premium, Technological, Serene, Deep Sleep",
+    "archetype": "The Magician (Transformation through Technology)",
+    "aesthetic": "Dark Mode Luxury, Bioluminescent Accents, Glassmorphism"
+  },
+  "typography": {
+    "headings": {
+      "family": "Plus Jakarta Sans, sans-serif",
+      "weights": ["600", "700", "800"],
+      "usage": "Use for all section titles, hero text, and product names. Tight tracking (-0.02em) for large text."
+    },
+    "body": {
+      "family": "Inter, sans-serif",
+      "weights": ["400", "500"],
+      "usage": "Use for descriptions, specifications, and navigation. Normal tracking."
+    },
+    "installation": "Import from Google Fonts: @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');"
+  },
+  "colors": {
+    "palette": {
+      "background": {
+        "primary": "#020617",
+        "secondary": "#0f172a",
+        "tertiary": "#1e293b"
+      },
+      "text": {
+        "primary": "#f8fafc",
+        "secondary": "#94a3b8",
+        "muted": "#64748b"
+      },
+      "accent": {
+        "primary": "#4ecdc4",
+        "secondary": "#2dd4bf",
+        "glow": "rgba(78, 205, 196, 0.5)"
+      },
+      "border": {
+        "subtle": "rgba(255, 255, 255, 0.1)",
+        "highlight": "rgba(78, 205, 196, 0.3)"
+      }
+    },
+    "usage_rules": {
+      "gradients": "Use subtle radial gradients for backgrounds (Deep Navy -> Black). NO linear gradients for text.",
+      "surfaces": "Glassmorphism: bg-slate-900/70 backdrop-blur-md border border-white/10.",
+      "glows": "Use box-shadow for glowing effects on active states: shadow-[0_0_20px_rgba(78,205,196,0.3)]."
+    }
+  },
+  "layout_strategies": {
+    "container": {
+      "max_width": "max-w-7xl",
+      "padding": "px-6 md:px-12 lg:px-24",
+      "center": "mx-auto"
+    },
+    "spacing": {
+      "section_gap": "py-24 md:py-32",
+      "element_gap": "gap-8 md:gap-12"
+    },
+    "grids": {
+      "bento_hero": "grid grid-cols-1 md:grid-cols-12 gap-6",
+      "product_catalog": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8",
+      "specs_list": "grid grid-cols-2 gap-x-8 gap-y-4"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#4ecdc4] text-[#020617] hover:bg-[#2dd4bf] hover:shadow-[0_0_20px_rgba(78,205,196,0.4)] rounded-full px-8 py-4 font-bold transition-all duration-300",
+      "secondary": "bg-white/5 border border-white/10 text-white hover:bg-white/10 hover:border-white/20 rounded-full px-8 py-4 font-medium backdrop-blur-sm transition-all duration-300",
+      "ghost": "text-[#4ecdc4] hover:text-[#2dd4bf] hover:underline underline-offset-4 transition-colors"
+    },
+    "cards": {
+      "product": "group relative overflow-hidden rounded-2xl bg-slate-900/50 border border-white/5 hover:border-[#4ecdc4]/30 transition-all duration-500",
+      "feature": "p-8 rounded-3xl bg-gradient-to-br from-slate-900 to-slate-950 border border-white/5 hover:border-white/10 transition-all"
+    },
+    "navigation": {
+      "bar": "fixed top-6 left-1/2 -translate-x-1/2 w-[90%] max-w-5xl z-50 rounded-full bg-slate-950/80 backdrop-blur-xl border border-white/10 px-6 py-4 flex items-center justify-between shadow-2xl",
+      "link": "text-sm font-medium text-slate-300 hover:text-[#4ecdc4] transition-colors"
+    },
+    "inputs": {
+      "field": "bg-slate-950/50 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-slate-600 focus:border-[#4ecdc4] focus:ring-1 focus:ring-[#4ecdc4] outline-none transition-all"
+    }
+  },
+  "motion": {
+    "principles": "Smooth, Fluid, Dream-like. Avoid sharp/jerky movements.",
+    "library": "framer-motion",
+    "variants": {
+      "fade_up": {
+        "initial": { "opacity": 0, "y": 40 },
+        "whileInView": { "opacity": 1, "y": 0 },
+        "viewport": { "once": true },
+        "transition": { "duration": 0.8, "ease": "easeOut" }
+      },
+      "hover_lift": {
+        "whileHover": { "y": -10, "scale": 1.02 }
+      }
+    }
+  },
+  "assets": {
+    "logo": {
+      "url": "https://customer-assets.emergentagent.com/job_ibed-store/artifacts/8a77bb1w_WhatsApp%20Image%202026-02-22%20at%2014.44.57.jpeg",
+      "alt": "İbed Logo - Smart Sleep"
+    },
+    "images": {
+      "hero_bg": "https://images.unsplash.com/photo-1644057501622-dfa7dd26dbfb?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "lifestyle_1": "https://images.unsplash.com/photo-1749930206000-179d0b85aa7e?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "mattress_texture_1": "https://images.unsplash.com/photo-1759176171789-0aa3f84d15ca?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "mattress_texture_2": "https://images.unsplash.com/photo-1759176170879-6bd7073ab4f4?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "mood_dark": "https://images.unsplash.com/photo-1659986480984-9b7a847168d4?crop=entropy&cs=srgb&fm=jpg&q=85"
+    }
+  },
+  "page_specifics": {
+    "home": {
+      "hero": "Full screen immersive. Dark overlay (bg-black/40). Headline centered or bottom-left. 'Smart Bed' glowing text.",
+      "features": "Bento grid layout showing 3 key features: Comfort, Technology, Durability."
+    },
+    "products": {
+      "layout": "Sidebar filter (sticky) + Grid content. Cards should focus on image quality. Hover reveals specs.",
+      "categories": ["Yatak (Mattress)", "Baza (Bed Base)"]
+    },
+    "product_detail": {
+      "layout": "Split screen. Left: Sticky Product Image. Right: Scrollable details (Specs, Story, Warranty).",
+      "visuals": "Use close-up textures to show quality."
+    },
+    "contact": {
+      "layout": "Minimalist form on glass card. Map overlay with custom dark theme styles.",
+      "info": {
+        "phone": "03523211755",
+        "address": "Kayseri OSB 23. Cad. No:19 Melikgazi/Kayseri"
+      }
+    }
+  },
+  "universal_guidelines": [
+    "Use 'lenis' for smooth scrolling.",
+    "Implement a custom cursor (optional) - a small glowing dot.",
+    "Ensure all text has sufficient contrast against dark backgrounds.",
+    "Do NOT use pure black (#000000) for backgrounds; use tinted blacks (#020617).",
+    "Add 'data-testid' to all interactive elements.",
+    "Mobile First: Stack grids to single column on mobile.",
+    "Use React Icons (Lucide) for UI elements."
+  ],
+  "instructions_to_main_agent": "Follow these guidelines strictly. The site must feel like a premium tech product (like a high-end speaker or electric car site), not a traditional furniture store. Prioritize atmosphere and smooth interactions."
+}
