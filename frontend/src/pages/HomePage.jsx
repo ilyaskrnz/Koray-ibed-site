@@ -1,33 +1,8 @@
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Shield, Zap, Award, ChevronRight } from "lucide-react";
-import axios from "axios";
-
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+import { ArrowRight, Shield, Zap, Award } from "lucide-react";
 
 const HomePage = () => {
-  const [featuredProducts, setFeaturedProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        // First try to seed products
-        await axios.post(`${API}/seed-products`);
-        // Then fetch featured products
-        const response = await axios.get(`${API}/products?featured=true`);
-        setFeaturedProducts(response.data.slice(0, 4));
-      } catch (error) {
-        console.error("Error fetching products:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchProducts();
-  }, []);
-
   const features = [
     {
       icon: Shield,
