@@ -10,7 +10,6 @@ const AboutPage = () => {
     { number: "20+", label: t("yearsExperience") },
     { number: "50K+", label: t("happyCustomers") },
     { number: "100+", label: t("dealerNetwork") },
-    { number: "20", label: t("yearsWarranty") },
   ];
 
   const values = [
